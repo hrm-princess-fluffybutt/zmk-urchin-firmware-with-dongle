@@ -12,6 +12,9 @@ manifest:
       # nice!view gem
     - name: m165437
       url-base: https://github.com/M165437
+      # prospector
+    - name: janpfischer
+      url-base: https://github.com/janpfischer
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -22,6 +25,9 @@ manifest:
       revision: main
     - name: nice-view-gem
       remote: m165437
+      revision: main
+    - name: zmk-dongle-screen
+      remote: janpfischer
       revision: main
   self:
     path: config
