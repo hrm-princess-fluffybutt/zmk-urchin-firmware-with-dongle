@@ -8,12 +8,12 @@ This firmware enables wireless connectivity for the Urchin keyboard using a Seee
 
 ## Features
 
-- 🔌 USB dongle form factor (Seeed XIAO BLE)
-- 📱 ZMK Studio support for real-time monitoring and configuration
+- USB dongle form factor (Seeed XIAO BLE)
+- ZMK Studio support for real-time monitoring and configuration
 
 ## Hardware Requirements
 
-- **Dongle**: Seeed XIAO BLE (nRF52840)
+- **Dongle**: Prospector - Seeed XIAO BLE (nRF52840)
 - **Keyboard Halves**: Nice!Nano (nRF52840) microcontrollers
 - **USB Connection**: USB-C adapter/cable
 
@@ -43,6 +43,12 @@ Configuration files are located in the `config/` directory. Refer to [ZMK Docume
 - [ZMK Documentation](https://zmk.dev)
 - [ZMK Studio](https://studio.zmk.dev)
 - [Seeed XIAO BLE](https://wiki.seeedstudio.com/XIAO_BLE)
+
+## Credits
+
+- [duckyb](https://github.com/duckyb)
+- [carrefinho](https://github.com/carrefinho)
+- [M165437](https://github.com/M165437)
 
 ## License
 
