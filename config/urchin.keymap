@@ -7,7 +7,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/pointing.h>
 
 // Layer definitions
 
@@ -72,67 +72,66 @@
         // Base alpha layer
 
         default_layer {
-            display-name = "beep";
+            display-name = "default";
             label = "beep";
             bindings = <
-&kp Q             &kp W             &kp E    &kp R            &kp T             &kp Y          &kp U          &kp I        &kp O      &kp P
-&kp A             &kp S             &kp D    &lt 1 F          &kp G             &kp H          &kp J          &kp K        &kp L      &kp BACKSPACE
-&mt LEFT_ALT Z    &mt LEFT_GUI X    &kp C    &kp V            &kp B             &kp N          &kp M          &kp COMMA    &kp DOT    &kp SQT
-                                             &mt LCTRL TAB    &kp LEFT_SHIFT    &lt 2 SPACE    &lt 3 ENTER
+&kp Q           &kp W           &lt 2 E  &kp R          &kp T           &kp Y        &kp U        &kp I      &kp O    &kp P
+&kp A           &kp S           &kp D    &lt 1 F        &kp G           &kp H        &kp J        &kp K      &kp L    &kp BACKSPACE
+&mt LEFT_ALT Z  &mt LEFT_GUI X  &kp C    &kp V          &kp B           &kp N        &kp M        &kp COMMA  &kp DOT  &kp SQT
+                                         &mt LCTRL TAB  &kp LEFT_SHIFT  &lt 4 SPACE  &lt 3 ENTER
             >;
         };
 
-        // Numbers and high frequency symbols
-
-        sym_layer {
-            display-name = "sym";
+        sym_num_layer {
+            display-name = "sym_num";
             label = "sym";
             bindings = <
-&kp ESCAPE      &kp MINUS               &kp EQUAL                &none     &none            &none            &kp N7          &kp N8          &kp N9          &kp GRAVE
-&kp QUESTION    &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS    &trans    &kp COLON        &kp UNDERSCORE   &kp NUMBER_4    &kp N5          &kp NUMBER_6    &trans
-&kp SLASH       &kp LEFT_BRACKET        &kp RIGHT_BRACKET        &none     &kp SEMICOLON    &kp BACKSLASH    &kp NUMBER_1    &kp NUMBER_2    &kp NUMBER_3    &trans
-                                                                 &trans    &trans           &trans           &kp N0
+&kp ESCAPE    &kp MINUS             &kp EQUAL              &none   &none          &none           &kp N7        &kp N8        &kp N9        &kp GRAVE
+&kp QUESTION  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans  &kp COLON      &kp UNDERSCORE  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans
+&kp SLASH     &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &none   &kp SEMICOLON  &kp BACKSLASH   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans
+                                                           &trans  &trans         &trans          &kp N0
             >;
         };
-
-        // Main modifiers and arrow keys
 
         ext_layer {
             display-name = "ext";
             label = "ext";
             bindings = <
-&kp LC(LA(DEL))    &none            &none    &none     &kp LC(LS(T))    &kp PAGE_UP         &kp HOME      &kp UP          &kp END            &kp DEL
-&none              &kp LG(LS(S))    &none    &none     &none            &kp PAGE_DOWN       &kp LEFT      &kp DOWN        &kp RIGHT          &none
-&trans             &trans           &none    &none     &none            &kp K_PLAY_PAUSE    &kp C_MUTE    &kp C_VOL_DN    &kp C_VOLUME_UP    &none
-                                             &trans    &trans           &trans              &trans
+&kp LC(LA(DEL))  &none          &none  &none   &kp LC(LS(T))  &kp PAGE_UP       &kp HOME    &kp UP        &kp END          &kp DEL
+&none            &kp LG(LS(S))  &none  &none   &none          &kp PAGE_DOWN     &kp LEFT    &kp DOWN      &kp RIGHT        &none
+&trans           &trans         &none  &none   &none          &kp K_PLAY_PAUSE  &kp C_MUTE  &kp C_VOL_DN  &kp C_VOLUME_UP  &none
+                                       &trans  &trans         &trans            &trans
             >;
         };
-
-        // Function keys with modifiers
 
         fnc_layer {
             display-name = "fnc";
             label = "fnc";
             bindings = <
-&kp F1     &kp F2     &kp F3    &kp F4    &kp F5    &kp F6    &kp F7    &kp F8    &kp F9    &kp F10
-&kp F11    &kp F12    &none     &none     &none     &none     &none     &none     &none     &none
-&trans     &trans     &none     &none     &none     &none     &none     &none     &none     &mo 4
-                                &trans    &trans    &none     &trans
+&kp F1   &kp F2   &kp F3  &kp F4  &kp F5  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
+&kp F11  &kp F12  &none   &none   &none   &none   &none   &none   &none   &none
+&trans   &trans   &none   &none   &none   &none   &none   &none   &none   &mo 5
+                          &trans  &trans  &none   &trans
             >;
         };
 
-        // Low frequency symbols.
-        // Used to type regional accents.
-        // Used to change the keyboard's settings.
+        mouse_nav_layer {
+            bindings = <
+&trans  &trans            &msc MOVE_Y(10)   &trans           &trans  &trans  &mkp LCLK       &mkp MCLK       &mkp RCLK        &trans
+&trans  &msc MOVE_X(-10)  &trans            &msc MOVE_X(10)  &trans  &trans  &mmv MOVE_LEFT  &mmv MOVE_UP    &mmv MOVE_RIGHT  &trans
+&trans  &trans            &msc MOVE_Y(-10)  &trans           &trans  &trans  &trans          &mmv MOVE_DOWN  &trans           &trans
+                                            &trans           &trans  &trans  &trans
+            >;
+        };
 
         settings_layer {
             display-name = "set";
             label = "set";
             bindings = <
-&studio_unlock      &none    &none    &bt BT_CLR    &bt BT_SEL 0    &bt BT_SEL 3    &none     &unstick    &none    &bootloader
-&none               &none    &none    &none         &bt BT_SEL 1    &bt BT_SEL 4    &none     &none       &none    &none
-&none               &none    &none    &none         &bt BT_SEL 2    &bt BT_SEL 5    &none     &none       &none    &trans
-                                 &none         &none           &none           &trans
+&studio_unlock  &none  &none  &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 3  &none   &unstick  &none  &bootloader
+&none           &none  &none  &none       &bt BT_SEL 1  &bt BT_SEL 4  &none   &none     &none  &none
+&kp Y           &kp V  &kp O  &kp N       &bt BT_SEL 2  &bt BT_SEL 5  &none   &none     &none  &trans
+                              &none       &none         &none         &trans
             >;
         };
     };
