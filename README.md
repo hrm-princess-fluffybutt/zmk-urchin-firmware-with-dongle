@@ -38,6 +38,9 @@ Firmware is automatically built and released via GitHub Actions.
 
 Configuration files are located in the `config/` directory. Refer to [ZMK Documentation](https://zmk.dev/docs) for detailed configuration options.
 
+## Keymap
+![keymap](https://github.com/hrm-princess-fluffybutt/zmk-urchin-firmware-with-dongle/blob/master/keymap.svg)
+
 ## Resources
 
 - [ZMK Documentation](https://zmk.dev)
