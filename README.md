@@ -49,9 +49,9 @@ Configuration files are located in the `config/` directory. Refer to [ZMK Docume
 
 ## Credits
 
-- [duckyb](https://github.com/duckyb)
-- [carrefinho](https://github.com/carrefinho)
-- [M165437](https://github.com/M165437)
+- [duckyb](https://github.com/duckyb/urchin)
+- [carrefinho](https://github.com/carrefinho/prospector)
+- [janpfischer](https://github.com/janpfischer/zmk-dongle-screen)
 
 ## License
 
