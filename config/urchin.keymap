@@ -71,9 +71,9 @@
 
         // Base alpha layer
 
-        default_layer {
-            display-name = "default";
-            label = "beep";
+        base_layer {
+            display-name = "base";
+            label = "base";
             bindings = <
 &kp Q           &kp W           &lt 2 E  &kp R          &kp T           &kp Y        &kp U        &kp I      &kp O    &kp P
 &kp A           &kp S           &kp D    &lt 1 F        &kp G           &kp H        &kp J        &kp K      &kp L    &kp BACKSPACE
@@ -84,7 +84,7 @@
 
         sym_num_layer {
             display-name = "sym_num";
-            label = "sym";
+            label = "sym_num";
             bindings = <
 &kp ESCAPE    &kp MINUS             &kp EQUAL              &none   &none          &none           &kp N7        &kp N8        &kp N9        &kp GRAVE
 &kp QUESTION  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans  &kp COLON      &kp UNDERSCORE  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans
@@ -116,6 +116,8 @@
         };
 
         mouse_nav_layer {
+            display-name = "mse_nav";
+            label = "mse_nav";
             bindings = <
 &trans  &trans            &msc MOVE_Y(10)   &trans           &trans  &trans  &mkp LCLK       &mkp MCLK       &mkp RCLK        &trans
 &trans  &msc MOVE_X(-10)  &trans            &msc MOVE_X(10)  &trans  &trans  &mmv MOVE_LEFT  &mmv MOVE_UP    &mmv MOVE_RIGHT  &trans
