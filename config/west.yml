@@ -10,8 +10,8 @@ manifest:
     - name: duckyb
       url-base: https://github.com/duckyb
       # nice!view gem
-    - name: m165437
-      url-base: https://github.com/M165437
+    - name: PiXeL16
+      url-base: https://github.com/PiXeL16
       # prospector
     - name: janpfischer
       url-base: https://github.com/janpfischer
@@ -23,8 +23,8 @@ manifest:
     - name: urchin-zmk-module
       remote: duckyb
       revision: main
-    - name: nice-view-gem
-      remote: m165437
+    - name: zmk-landscape-slideshow
+      remote: PiXeL16
       revision: main
     - name: zmk-dongle-screen
       remote: janpfischer

@@ -29,12 +29,13 @@ include:
     shield: settings_reset
   
   - board: nice_nano_v2
-    shield: urchin_left nice_view_adapter nice_view_gem
-    cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n -DCONFIG_NICE_VIEW_GEM_ANIMATION=n
+    shield: urchin_left nice_view_adapter nice_view_custom
+    # in miliseconds, 7200 second total duration 30 pictures, so 2 hour per picture
+    cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n -DCONFIG_CUSTOM_ANIMATION_SPEED=7200000
     artifact-name: nice_view_left
   - board: nice_nano_v2
-    shield: urchin_right nice_view_adapter nice_view_gem
-    cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n -DCONFIG_NICE_VIEW_GEM_ANIMATION=n
+    shield: urchin_right nice_view_adapter nice_view_custom
+    cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n -DCONFIG_CUSTOM_ANIMATION_SPEED=7200000
     artifact-name: nice_view_right
 
   - board: nice_nano_v2
