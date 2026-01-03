@@ -64,6 +64,12 @@
         // both left thumb keys
         // left index & middle fingers (home-row)
         // hold control & space for Adobe workflow
+
+        dongle_bootloader {
+            bindings = <&bootloader>;
+            key-positions = <10>;
+            layers = <5>;
+        };
     };
 
     keymap {
@@ -130,10 +136,10 @@
             display-name = "set";
             label = "set";
             bindings = <
-&studio_unlock  &none    &none    &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 3  &none   &unstick  &none  &bootloader
-&none           &kp F23  &kp F22  &kp F24     &bt BT_SEL 1  &bt BT_SEL 4  &none   &none     &none  &none
-&kp Y           &kp V    &kp O    &kp N       &bt BT_SEL 2  &bt BT_SEL 5  &none   &none     &none  &trans
-                                  &none       &none         &none         &trans
+&studio_unlock  &bootloader  &none    &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 3  &none   &unstick  &bootloader  &none
+&none           &kp F23      &kp F22  &kp F24     &bt BT_SEL 1  &bt BT_SEL 4  &none   &none     &none        &none
+&kp Y           &kp V        &kp O    &kp N       &bt BT_SEL 2  &bt BT_SEL 5  &none   &none     &none        &trans
+                                      &none       &none         &none         &trans
             >;
         };
     };
