@@ -67,7 +67,7 @@
 
         dongle_bootloader {
             bindings = <&bootloader>;
-            key-positions = <10>;
+            key-positions = <10 0>;
             layers = <5>;
         };
     };
